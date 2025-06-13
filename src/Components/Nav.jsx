@@ -1,16 +1,31 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-function  Nav() {
-    const navigate = useNavigate()
+
+function Nav() {
+  const navigate = useNavigate()
+
   return (
-    <div className='w-full bg-gray-100  flex justify-between px-20 py-5 items-start ' >
-        <div className='font-bold text-xl'>NEWS 24/7</div>
-        <div className='flex text-xl font-semibold justify-between items-center gap-10'>
-            <div onClick={()=>navigate("/")}>News</div>
-            <div onClick={()=>navigate("/Bookmark")}>Bookmark</div>
+    <nav className="w-full bg-gray-100 px-6 py-4 shadow-md">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between">
+        <div className="font-extrabold text-2xl text-blue-600">NEWS 24/7</div>
+
+        <div className="flex gap-6 text-lg font-medium mt-3 sm:mt-0">
+          <button
+            onClick={() => navigate("/")}
+            className="hover:text-blue-500 transition-colors"
+          >
+            News
+          </button>
+          <button
+            onClick={() => navigate("/Bookmark")}
+            className="hover:text-blue-500 transition-colors"
+          >
+            Bookmark
+          </button>
         </div>
-    </div>
+      </div>
+    </nav>
   )
 }
 
-export default  Nav
+export default Nav
