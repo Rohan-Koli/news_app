@@ -19,12 +19,12 @@ function News() {
 
   const fetchNews = async (page = 1) => {
     try {
-      const res = await axios.get(import.meta.env.VITE_NEWS_URL, {
+      const res = await axios.get("https://newsapi.org/v2/everything", {
         params: {
           q: 'Apple',
           from: formattedDate,
           sortBy: 'popularity',
-          apiKey: import.meta.env.VITE_API_KEY,
+          apiKey: "f634093fefcb4593a0bbd3e9ea72ee61",
           page,
           pageSize
         },
